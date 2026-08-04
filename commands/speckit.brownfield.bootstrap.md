@@ -52,7 +52,7 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
 
 3. **Customize spec template**: Modify .specify/templates/spec-template.md to produce complete, implementation-ready specifications.
 
-The generated specification template MUST include:
+   The generated specification template MUST include:
    - Functional Requirements
    - Non-Functional Requirements
    - Use Cases
@@ -62,23 +62,23 @@ The generated specification template MUST include:
    - Edge Cases
    - Acceptance Criteria
 
-Functional requirements MUST explicitly describe observable system behavior, including:
+   Functional requirements MUST explicitly describe observable system behavior, including:
    - triggering condition;
    - required inputs;
    - performed processing;
    - produced outputs;
    - failure behavior.
 
-Non-functional requirements MUST be measurable and testable.
+   Non-functional requirements MUST be measurable and testable.
 
-Every external interface (API, CLI, UI interaction, message, file, database entity) MUST define complete input/output contracts.
+   Every external interface (API, CLI, UI interaction, message, file, database entity) MUST define complete input/output contracts.
    - Add project-specific sections (e.g., "Database Migrations" for projects with ORMs)
    - Include architecture-aware requirements (e.g., "Frontend Requirements" and "API Requirements" for full-stack projects)
    - Reference actual module paths instead of generic placeholders
 
-Input/Output Specification Rules
+   Input/Output Specification Rules
 
-Every input parameter MUST specify:
+   Every input parameter MUST specify:
    - name;
    - purpose;
    - type;
@@ -89,7 +89,7 @@ Every input parameter MUST specify:
    - validation rules;
    - constraints.
 
-Every output MUST specify:
+   Every output MUST specify:
    - structure;
    - data type;
    - format;
