@@ -55,7 +55,17 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
    - Dependencies added or removed since bootstrap
    - New branch patterns that don't match constitution rules
 
-5. **Output validation report**:
+5. **Validate Specification Completeness**: Check that every specification contains:
+   - Functional requirements describing observable behavior
+   - Non-functional requirements with measurable criteria
+   - Complete input specifications
+   - Complete output specifications
+   - Validation rules
+   - Error scenarios
+   - Primary and alternative use cases
+   - Acceptance criteria
+
+6. **Output validation report**:
 
    ```markdown
    # Validation Report
@@ -75,6 +85,17 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
    | Spec template | ✅ Pass | All custom sections map to real project aspects |
    | Plan template | ⚠️ Drift | References `shared/` module — directory renamed to `common/` |
    | Tasks template | ✅ Pass | Test commands verified |
+
+   ## Specification Quality
+
+   | Item | Status | Details |
+   |------|--------|---------|
+   | Functional requirements complete | |
+   | NFR measurable | |
+   | Input contracts complete | |
+   | Output contracts complete | |
+   | Validation rules present | |
+   | Use cases cover failures | |
 
    ## Summary
    - **Checks passed**: 9/11
