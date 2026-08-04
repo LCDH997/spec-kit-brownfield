@@ -57,12 +57,30 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
    - **Testing**: Test file location (`__tests__/`, `*_test.go`, `test_*.py`), test naming
    - **Documentation**: README structure, inline docs, API docs
 
-5. **Detect existing governance**: Check for files that indicate existing project standards:
+5. **Detect Interface Contracts**
+   - Analyze:
+      - REST APIs;
+      - GraphQL;
+      - gRPC;
+      - CLI commands;
+      - configuration files;
+      - message queues;
+      - database schemas;
+      - file formats.
+
+   - Collect evidence about:
+      - input types;
+      - output types;
+      - validation rules;
+      - serialization formats;
+      - value constraints. 
+
+6. **Detect existing governance**: Check for files that indicate existing project standards:
    - `CONTRIBUTING.md`, `ARCHITECTURE.md`, `ADR/` (Architecture Decision Records)
    - `.editorconfig`, linter configs (`.eslintrc`, `.flake8`, `rustfmt.toml`)
    - `CLAUDE.md`, `AGENTS.md`, `.specify/` (existing spec-kit setup)
 
-6. **Output project profile**:
+7. **Output project profile**:
 
    ```markdown
    # Project Profile
@@ -95,6 +113,20 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
    - **Branch pattern**: `feat/*`, `fix/*`, `chore/*`
    - **Commit style**: Conventional Commits
    - **Test location**: `__tests__/` (frontend), `tests/` (backend)
+
+   ## Interface Inventory
+   - REST endpoints
+   - CLI commands
+   - Events
+   - Message formats
+   - File formats
+   - Database entities
+
+   For each interface summarize:
+      - inputs;
+      - outputs;
+      - validation mechanisms;
+      - serialization format.
 
    ## Existing Governance
    - ✅ CONTRIBUTING.md
