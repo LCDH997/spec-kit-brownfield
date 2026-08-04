@@ -41,11 +41,44 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
    - **Database**: Migrations, models, or schema changes related to this feature
 
 3. **Reverse-engineer spec.md**: Analyze the code to reconstruct what the feature does:
-   - **User scenarios**: Infer from test cases, route handlers, and UI components
-   - **Requirements**: Extract from code behavior, validation rules, and error handling
-   - **Success criteria**: Derive from test assertions and acceptance patterns
-   - **Assumptions**: Note any hardcoded values, environment dependencies, or implicit requirements
-   - Mark the spec as `status: migrated` to distinguish from specs created through the normal workflow
+   - **Use Cases**: For every detected feature reconstruct:
+      - primary flow;
+      - alternative flows;
+      - validation failures;
+      - error scenarios;
+      - permission failures;
+      - boundary conditions;
+      - recovery scenarios;
+      - postconditions.
+   - **Requirements**: Generate complete functional requirements that explicitly describe:
+      - triggering event;
+      - required inputs;
+      - processing logic;
+      - produced outputs;
+      - validation rules;
+      - error handling;
+      - observable system behavior.
+      Avoid generic requirements such as "supports X". Every requirement must describe exactly what the system does.
+      - **Success criteria**: Derive from test assertions and acceptance patterns
+      - **Assumptions**: Note any hardcoded values, environment dependencies, or implicit requirements
+      - Mark the spec as `status: migrated` to distinguish from specs created through the normal workflow
+   - **Data Contracts**: For every detected API, CLI command, event, message, database entity, or file reconstruct:
+      - inputs;
+      - outputs;
+      - formats;
+      - types;
+      - mandatory fields;
+      - allowed values;
+      - constraints;
+      - validation rules.
+   - **Non-functional Requirements**: Infer measurable quality requirements whenever possible:
+      - performance;
+      - scalability;
+      - availability;
+      - security;
+      - reliability;
+      - observability;
+      - maintainability.
 
 4. **Reverse-engineer plan.md**: Reconstruct the implementation approach:
    - **Technical context**: Actual frameworks, libraries, and patterns used
