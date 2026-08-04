@@ -37,15 +37,66 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
    - **Dependency rules**: How modules depend on each other, what imports are allowed
    - **Quality gates**: Linting, formatting, CI checks that must pass
 
+   The constitution **MUST** define:
+   - required completeness of functional requirements;
+   - required completeness of non-functional requirements;
+   - mandatory input/output specifications;
+   - mandatory validation rules;
+   - minimum use-case coverage;
+   - measurable acceptance criteria.
+
    The constitution **MUST NOT**:
    - Override existing project standards without user confirmation
    - Invent conventions that don't exist in the codebase
    - Include generic boilerplate unrelated to the actual project
 
-3. **Customize spec template**: Modify `.specify/templates/spec-template.md` to reflect the project:
+3. **Customize spec template**: Modify .specify/templates/spec-template.md to produce complete, implementation-ready specifications.
+
+The generated specification template MUST include:
+   - Functional Requirements
+   - Non-Functional Requirements
+   - Use Cases
+   - Data Contracts
+   - Validation Rules
+   - Error Scenarios
+   - Edge Cases
+   - Acceptance Criteria
+
+Functional requirements MUST explicitly describe observable system behavior, including:
+   - triggering condition;
+   - required inputs;
+   - performed processing;
+   - produced outputs;
+   - failure behavior.
+
+Non-functional requirements MUST be measurable and testable.
+
+Every external interface (API, CLI, UI interaction, message, file, database entity) MUST define complete input/output contracts.
    - Add project-specific sections (e.g., "Database Migrations" for projects with ORMs)
    - Include architecture-aware requirements (e.g., "Frontend Requirements" and "API Requirements" for full-stack projects)
    - Reference actual module paths instead of generic placeholders
+
+Input/Output Specification Rules
+
+Every input parameter MUST specify:
+   - name;
+   - purpose;
+   - type;
+   - format;
+   - required/optional;
+   - default value;
+   - allowed values or ranges;
+   - validation rules;
+   - constraints.
+
+Every output MUST specify:
+   - structure;
+   - data type;
+   - format;
+   - mandatory fields;
+   - possible values;
+   - error representation;
+   - ordering/completeness guarantees if applicable.
 
 4. **Customize plan template**: Modify `.specify/templates/plan-template.md` to reflect the project:
    - Include module-aware implementation sections (e.g., separate phases for frontend/backend)
